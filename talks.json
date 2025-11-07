@@ -1,0 +1,38 @@
+[
+  {
+    "title": "El Lenguaje Secreto de los Árboles",
+    "speakers": ["Dr. Aris Arbor"],
+    "categories": ["naturaleza", "ciencia", "botánica"],
+    "description": "Una inmersión profunda en cómo los árboles se comunican entre sí a través de redes subterráneas de hongos, compartiendo nutrientes y advertencias."
+  },
+  {
+    "title": "Navegación Estelar: Orientación con el Cielo Nocturno",
+    "speakers": ["Estrella Polaris"],
+    "categories": ["supervivencia", "astronomía"],
+    "description": "Aprende a identificar las constelaciones clave y a usar las estrellas para encontrar el norte, una habilidad esencial para cualquier aventurero del bosque."
+  },
+  {
+    "title": "Primeros Auxilios en la Naturaleza: ¿Qué Hacer Cuando Estás Lejos de la Ayuda?",
+    "speakers": ["Salvio Vidas", "Reme Dios"],
+    "categories": ["supervivencia", "salud"],
+    "description": "Técnicas prácticas de primeros auxilios utilizando recursos naturales y un botiquín básico para tratar desde cortes hasta picaduras de insectos."
+  },
+  {
+    "title": "El Arte del Camuflaje: Pasando Desapercibido",
+    "speakers": ["Silvestre Oculto"],
+    "categories": ["naturaleza", "fotografía"],
+    "description": "Descubre cómo los animales se mimetizan con su entorno y cómo puedes aplicar esas técnicas para la observación de la fauna y la fotografía de naturaleza."
+  },
+  {
+    "title": "Cocina de Campamento Gourmet",
+    "speakers": ["Chef Fornalla"],
+    "categories": ["comida", "supervivencia"],
+    "description": "Eleva tu experiencia culinaria en el bosque con recetas sencillas pero deliciosas que puedes preparar sobre una fogata con ingredientes mínimos."
+  },
+  {
+    "title": "Cuentos y Leyendas del Bosque al Anochecer",
+    "speakers": ["Nara Dor", "Fabu Loso"],
+    "categories": ["cultura", "historia"],
+    "description": "Una sesión para cerrar el día, compartiendo historias y mitos ancestrales sobre los espíritus y criaturas mágicas que habitan en los bosques del mundo."
+  }
+]
