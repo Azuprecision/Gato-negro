@@ -17,7 +17,14 @@
 
     <main>
         <div class="search-container">
-            <input type="text" id="search-box" placeholder="Buscar por categoría (ej: supervivencia, ciencia)...">
+            <div class="search-options">
+                <input type="radio" id="search-by-category" name="search-type" value="category" checked>
+                <label for="search-by-category">Buscar por Categoría</label>
+                
+                <input type="radio" id="search-by-speaker" name="search-type" value="speaker">
+                <label for="search-by-speaker">Buscar por Orador</label>
+            </div>
+            <input type="text" id="search-box" placeholder="Escribe aquí para buscar...">
         </div>
         <div id="schedule-container">
             <!-- El programa se generará aquí con JavaScript -->

@@ -50,6 +50,18 @@ main {
     box-sizing: border-box;
 }
 
+.search-options {
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-options label {
+    cursor: pointer;
+    margin-left: 0.25rem;
+}
+
 .schedule-item {
     display: flex;
     margin-bottom: 1.5rem;
