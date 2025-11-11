@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const scheduleContainer = document.getElementById('schedule-container');
     const searchBox = document.getElementById('search-box');
+    const searchOptions = document.querySelectorAll('input[name="search-type"]');
     let allTalks = [];
 
     // Función para formatear la hora
@@ -13,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         scheduleContainer.innerHTML = '';
         let currentTime = new Date();
         currentTime.setHours(10, 0, 0, 0); // El evento empieza a las 10:00
+
+        if (talks.length === 0) {
+            scheduleContainer.innerHTML = '<p style="text-align: center;">No se encontraron resultados para tu búsqueda.</p>';
+            return;
+        }
 
         talks.forEach((talk, index) => {
             const startTime = new Date(currentTime);
@@ -62,6 +68,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+    // Función unificada para filtrar las charlas
+    const filterTalks = () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        const searchType = document.querySelector('input[name="search-type"]:checked').value;
+
+        const filteredTalks = allTalks.filter(talk => {
+            if (searchType === 'category') {
+                return talk.categories.some(cat => cat.toLowerCase().includes(searchTerm));
+            } else { // searchType === 'speaker'
+                return talk.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm));
+            }
+        });
+        renderSchedule(filteredTalks);
+    };
+
     // Cargar los datos de las charlas
     fetch('/api/talks')
         .then(response => response.json())
@@ -74,12 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scheduleContainer.innerHTML = '<p>No se pudo cargar el programa. Inténtalo de nuevo más tarde.</p>';
         });
 
-    // Filtrar charlas por categoría
-    searchBox.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase();
-        const filteredTalks = allTalks.filter(talk => {
-            return talk.categories.some(cat => cat.toLowerCase().includes(searchTerm));
-        });
-        renderSchedule(filteredTalks);
-    });
+    // Añadir listeners para la búsqueda
+    searchBox.addEventListener('input', filterTalks);
+    searchOptions.forEach(option => option.addEventListener('change', filterTalks));
 });

@@ -1,17 +1,5 @@
 # Node.js
 node_modules/
 npm-debug.log*
-.env
-
-# Logs and temporary files
-*.log
-*.tmp
 .DS_Store
-Thumbs.db
-
-# VSCode
-.vscode/
-
-# Build artifacts (if any are introduced later)
-dist/
-build/
+.env
